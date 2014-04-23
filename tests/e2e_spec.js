@@ -11,23 +11,19 @@ describe('Add a new todo', function() {
     });
 
     it('should have the save button enabled after filling in the fields', function() {
-        var saveButton;
+        var saveButton = element(by.css('[type="submit"]'));
 
         element(by.model("formData.title")).sendKeys("Create E2E spec");
         element(by.model("formData.description")).sendKeys("for the entire app");
-
-        saveButton = element(by.css('[type="submit"]'));
 
         expect(saveButton.isEnabled()).toEqual(true);
     });
 
     it('should save new todo', function() {
-        var saveButton;
+        var saveButton = element(by.css('[type="submit"]'));
 
         element(by.model("formData.title")).sendKeys("Create E2E spec");
         element(by.model("formData.description")).sendKeys("for the entire app");
-
-        saveButton = element(by.css('[type="submit"]'));
 
         saveButton.click();
 
@@ -52,9 +48,7 @@ describe('Edit the saved todo', function() {
     });
 
     it('should edit the saved todo', function() {
-        var saveButton;
-
-        saveButton = element(by.css('[type="submit"]'));
+        var saveButton = element(by.css('[type="submit"]'));
 
         element(by.repeater("todo in todos").row(0).column("title")).click();
 
