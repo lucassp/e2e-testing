@@ -1,0 +1,21 @@
+<a href="#!/add" class="btn btn-primary">Add todo</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="todo in todos">
+            <td>
+                <a ng-href="#!/edit/{{ $index }}">{{ todo.title }}</a>
+            </td>
+            <td>{{ todo.description }}</td>
+            <td>
+                <button type="button" class="btn btn-danger" ng-click="deleteTodo(todo)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
