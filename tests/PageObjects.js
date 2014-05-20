@@ -1,4 +1,4 @@
-module.exports.ToDoPage = function () {
+exports.ToDoPage = function () {
     this.saveButton = element(by.css('[type="submit"]'));
     this.titleField = element(by.model("formData.title"));
     this.descriptionField = element(by.model("formData.description"));
@@ -7,7 +7,7 @@ module.exports.ToDoPage = function () {
     };
 };
 
-module.exports.ToDoListPage = function () {
+exports.ToDoListPage = function () {
     this.addButton = element(by.css('[href="#!/add"]'));
     this.firstToDoTitle = element(by.repeater("todo in todos").row(0).column("title"));
     this.firstToDoDescription = element(by.repeater("todo in todos").row(0).column("description"));
