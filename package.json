@@ -2,7 +2,7 @@
     "name": "E2E_testing",
     "version": "0.1.0",
     "devDependencies": {
-        "protractor": "~0.22",
+        "protractor": "~0.23",
         "express": "3.x"
     }
 }
